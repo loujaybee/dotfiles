@@ -1,6 +1,7 @@
 #!/bin/bash
-echo "hello world!";
-sudo ./.bashrc
+source /home/gitpod/.dotfiles/.bashrc
+
+# Install Fish
 sudo apt-get install fish
 curl -L https://get.oh-my.fish > install
 fish install --path=/home/gitpod/.local/share/omf --config=~/.config/omf
