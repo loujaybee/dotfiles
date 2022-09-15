@@ -1,6 +1,3 @@
-#!/bin/bash
-source /home/gitpod/.dotfiles/.bashrc
-
 # Install Fish
 sudo apt-get install fish
 curl -L https://get.oh-my.fish > install
