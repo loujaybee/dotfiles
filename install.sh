@@ -1,4 +1,5 @@
 echo "Echo current directory"
+cd .dotfiles
 pwd
 
 echo "Update apt"
@@ -22,7 +23,7 @@ echo "omf finished"
 SHELL=/bin/fish
 
 echo "Move shell alias folder"
-mv ./.dotfiles/config.fish ~/.config/fish/config.fish
+mv config.fish ~/.config/fish/config.fish
 
 echo "Shell set to fish"
 
