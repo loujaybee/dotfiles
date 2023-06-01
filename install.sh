@@ -19,6 +19,7 @@ echo "omf finished"
 SHELL=/bin/fish
 
 echo "Move shell alias folder"
+pwd
 mv ./config.fish ~/.config/fish/config.fish
 
 echo "Shell set to fish"
