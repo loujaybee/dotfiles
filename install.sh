@@ -10,3 +10,6 @@ echo "omf finished"
 SHELL=/bin/fish
 echo "Shell set to fish"
 
+# Make fish start in bash shells by default
+echo "SHELL=/bin/fish" >> ~/.bash_profile
+echo "exec /bin/fish -l"  >> ~/.bash_profile
