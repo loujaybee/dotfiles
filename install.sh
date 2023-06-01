@@ -26,6 +26,7 @@ echo "Shell set to fish"
 
 echo "Start installing tmux"
 
-sudo apt-get -y install tmux
+sudo apt-get install libutempter0
+sudo apt-get install tmux
 
 echo "End installing tmux"
