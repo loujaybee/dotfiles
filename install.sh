@@ -14,7 +14,7 @@ echo "Shell set to fish"
 # echo "SHELL=/bin/fish" >> ~/.bashrc
 # echo "exec /bin/fish -l" >> ~/.bashrc
 
-if [ "$GITPOD_IDE_ALIAS" == "xterm" ]
+if [ $GITPOD_IDE_ALIAS == "xterm" ]
 then
     echo "Running xterm editor"
 else
