@@ -24,9 +24,10 @@ echo "Shell set to fish"
 # echo "SHELL=/bin/fish" >> ~/.bashrc
 # echo "exec /bin/fish -l" >> ~/.bashrc
 
-echo "Start installing tmux"
-
+echo "Start installing libutempter0, dependency of tmux to avoid interactive prompt"
 sudo apt-get install libutempter0
+
+echo "Start installing tmux"
 sudo apt-get install tmux
 
 echo "End installing tmux"
