@@ -26,6 +26,6 @@ echo "Shell set to fish"
 
 echo "Start installing tmux"
 
-DEBIAN_FRONTEND=noninteractive sudo apt-get install tmux
+sudo apt-get install tmux -y
 
 echo "End installing tmux"
