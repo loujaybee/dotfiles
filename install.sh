@@ -26,6 +26,6 @@ echo "Shell set to fish"
 
 echo "Start installing tmux"
 
-sudo apt-get install tmux -y
+sudo apt-get -y install tmux
 
 echo "End installing tmux"
