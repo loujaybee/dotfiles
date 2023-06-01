@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "Echo current directory"
 cd .dotfiles
 pwd
@@ -36,5 +38,8 @@ sudo apt-get install libutempter0
 
 echo "Start installing tmux"
 sudo apt-get install tmux
+
+echo "Install teamocil"
+gem install teamocil
 
 echo "End installing tmux"
