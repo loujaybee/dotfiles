@@ -13,3 +13,10 @@ echo "Shell set to fish"
 # Make fish start in bash shells by default
 # echo "SHELL=/bin/fish" >> ~/.bashrc
 # echo "exec /bin/fish -l" >> ~/.bashrc
+
+if [ "$GITPOD_IDE_ALIAS" == "xterm" ]
+then
+    echo "Running xterm editor"
+else
+    echo "Not running xterm editor!"
+fi
