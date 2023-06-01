@@ -1,3 +1,6 @@
+echo "Echo current directory"
+pwd
+
 echo "Update apt"
 sudo apt-get update --noninteractive
 
@@ -19,8 +22,7 @@ echo "omf finished"
 SHELL=/bin/fish
 
 echo "Move shell alias folder"
-pwd
-mv ./config.fish ~/.config/fish/config.fish
+mv ./dotfiles/config.fish ~/.config/fish/config.fish
 
 echo "Shell set to fish"
 
