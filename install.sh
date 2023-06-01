@@ -1,3 +1,6 @@
+echo "Update apt"
+sudo apt-get update --noninteractive
+
 # Install Fish
 
 echo "Install fish started"
@@ -23,7 +26,6 @@ echo "Shell set to fish"
 
 echo "Start installing tmux"
 
-sudo apt-get update
-sudo apt-get install tmux
+DEBIAN_FRONTEND=noninteractive sudo apt-get install tmux
 
 echo "End installing tmux"
