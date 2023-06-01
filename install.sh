@@ -18,6 +18,9 @@ echo "Run fish install"
 echo "omf finished"
 SHELL=/bin/fish
 
+echo "Move shell alias folder"
+mv config.fish ~/.config/fish/config.fish
+
 echo "Shell set to fish"
 
 # Make fish start in bash shells by default
