@@ -22,7 +22,7 @@ echo "Run fish install"
 /usr/bin/fish -c "omf install agnoster"
 
 echo "omf finished"
-SHELL=/bin/fish
+export SHELL=/bin/fish
 
 echo "Move shell alias folder"
 mv config.fish ~/.config/fish/config.fish
