@@ -43,3 +43,10 @@ echo "Install teamocil"
 gem install teamocil
 
 echo "End installing tmux"
+
+echo "Install and setup atuin"
+
+bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
+atuin login -u loujaybee -p $ATUIN_PASSWORD --key "$ATUIN_KEY"
+
+echo "End installing atuin"
