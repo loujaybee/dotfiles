@@ -51,5 +51,6 @@ echo "sync_frequency = \"5m\"" >> ~/.config/atuin/config.toml
 
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
 atuin login -u loujaybee -p $ATUIN_PASSWORD --key "$ATUIN_KEY"
+atuin sync
 
 echo "End installing atuin"
