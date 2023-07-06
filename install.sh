@@ -46,6 +46,9 @@ echo "End installing tmux"
 
 echo "Install and setup atuin"
 
+touch ~/.config/atuin/config.toml
+echo "sync_frequency = \"5m\"" >> ~/.config/atuin/config.toml
+
 bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
 atuin login -u loujaybee -p $ATUIN_PASSWORD --key "$ATUIN_KEY"
 
