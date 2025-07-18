@@ -53,4 +53,4 @@ echo "End installing tmux"
 # atuin login -u loujaybee -p $ATUIN_PASSWORD --key "$ATUIN_KEY"
 # atuin sync
 
-echo "End installing atuin"
+# echo "End installing atuin"
