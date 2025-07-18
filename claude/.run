@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Check if Claude is already installed
+if command -v claude &> /dev/null; then
+    echo "✨ Claude Code is already installed"
+else
+    if ! command -v npm &> /dev/null; then
+        echo "⚠️  Skipping claude code install, npm not found"
+        return 0
+    else
+        echo "🚀 Installing Claude Code..."
+        npm install -g @anthropic-ai/claude-code
+    fi
+fi
+
+# Set theme preference
+claude config set -g theme dark
+
+# Copy Claude config from mounted secret
+DEST="$HOME/.claude.json"
+if [ ! -f "$DEST" ]; then
+    echo "📋 Copying Claude config from root..."
+    sudo cp /root/.claude.json "$DEST" 2>/dev/null || {
+        echo "ℹ️  No Claude config found in root, skipping copy"
+        return 0
+    }
+fi
+
+# Fix permissions
+sudo chown "$(id -u):$(id -g)" "$DEST" 2>/dev/null
+
+# Set up Claude settings with pre-approved permissions
+echo "⚙️  Setting up Claude settings..."
+mkdir -p ~/.claude
+if [ ! -f ~/.claude/settings.json ]; then
+    cat > ~/.claude/settings.json << 'EOF'
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Edit(**)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm test:*)",
+      "Bash(yarn test:*)",
+      "WebFetch(domain:*.gitpod.io)"
+    ],
+    "deny": []
+  }
+}
+EOF
+    echo "✅ Created ~/.claude/settings.json"
+fi
